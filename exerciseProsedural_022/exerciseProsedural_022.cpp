@@ -14,3 +14,30 @@ bool diterima(float nilM, float nilB) {
         return false;
     }
 }
+int main() {
+    string nama[MAX_CANDIDATES];
+    float nilM[MAX_CANDIDATES], nilB[MAX_CANDIDATES];
+    int numCandidates, numDiterima = 0, numDitolak = 0;
+
+    cout << "Masukkan jumlah kandidat: ";
+    cin >> numCandidates;
+
+    // Memasukkan nilai tes Matematika dan B. Inggris untuk setiap kandidat
+    for (int i = 0; i < numCandidates; i++) {
+        cout << "Masukkan nama kandidat ke-" << i + 1 << ": ";
+        cin >> nama[i];
+
+        cout << "Masukkan nilai Matematika: ";
+        cin >> nilM[i];
+        cout << "Masukkan nilai B. Inggris: ";
+        cin >> nilB[i];
+
+        if (diterima(nilM[i], nilB[i])) {
+            cout << nama[i] << " diterima." << endl;
+            numDiterima++;
+        }
+        else {
+            cout << nama[i] << " tidak diterima." << endl;
+            numDitolak++;
+        }
+    }
