@@ -41,3 +41,9 @@ int main() {
             numDitolak++;
         }
     }
+    // Menampilkan total kandidat diterima dan tidak diterima
+    cout << endl << "Total kandidat diterima: " << numDiterima << endl;
+    cout << "Total kandidat tidak diterima: " << numDitolak << endl;
+
+    return 0;
+}
